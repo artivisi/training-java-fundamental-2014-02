@@ -1,4 +1,5 @@
 Training Day 1 :
+compare konflik
 
 Software Development JAVA: 
 1. JAVA SDK - java.com
@@ -6,7 +7,7 @@ Software Development JAVA:
 3. Editor - notepad++, netbeans, eclipse, dll
 4. Database - Mysql, oracle
 
-Software Kolaborasi :
+Software Kolaborasi 123:
 1. Version control : Git, Github, Bitbucket, dll
 2. Quip : untuk membuat catatan
 
