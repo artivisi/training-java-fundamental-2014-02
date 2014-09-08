@@ -40,4 +40,5 @@ Build tools yang paling mainstream di Java untuk saat ini (2014).
 * Compile : mvn package
 * Clean : mvn clean
 * Clean + Compile : mvn clean package
+* Run : mvn exec:java -Dexec.mainClass=nama.lengkap.ClassYangMauDijalankan
 
