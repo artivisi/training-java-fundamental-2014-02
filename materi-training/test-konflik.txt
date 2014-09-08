@@ -1,5 +1,5 @@
 Test Konflik
 Baris 1
 Ini di bawah baris 1
-Baris 2
+Baris 3
 Di bawah baris 2
