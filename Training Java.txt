@@ -1,0 +1,45 @@
+Training Day 1 :
+
+Software Development JAVA: 
+1. JAVA SDK - java.com
+2. Apache Maven - Kumpulan Library dan semua dependency nya
+3. Editor - notepad++, netbeans, eclipse, dll
+4. Database - Mysql, oracle
+
+Software Kolaborasi :
+1. Version control : Git, Github, Bitbucket, dll
+2. Quip : untuk membuat catatan
+
+Pilihan Download JAVA :
+> Java SDK : Software Development Kit : COmpile dan Execute/Run
+> JAVA JRE : JAVA Runtime Environment : Run
+> JAVA Standard Edition
+> JAVA Enterprise Edition
+
+Install JDK :
+1. install jdk 
+2. ke folder instalan jdk, C:\Program Files\Java\jdk1.7.0_60
+3. copy address instalan
+4. klik kanan my computer - properties - advanced system settings - environment variables - New di User Variables
+5. Isikan variable name => JAVA_HOME(terserah) , Variable value => paste address instalan jdk tadi
+6. OK
+
+Install Maven :
+1. copy folder maven di C:\
+2. lalu ke address C:\apache-maven-3.2.2\bin - copy addressnya
+3. klik kanan my computer - properties - advanced system settings - environment variables - Edit Variable "Path" di System Variables
+4. paste C:\apache-maven-3.2.2\bin
+5. OK
+
+execute maven di cmd :
+1. mvn clean package --> Compile
+2. mvn exec:java -Dexec.mainClass:namaPackage.namaClass --> Execute/Run
+
+Naming Variable :
+1. nama package di balik dari nama dommain, contoh: www.djbc.go.id --> nama package jadi id.go.djbc.www
+2. nama Class diawali dgn huruf besar pada kata pertama dan kata selanjutnya
+2. nama method diawali dgn huruf kecil pada kata pertama dan huruf besar pada kata selanjutnya
+
+Agar Java bisa dijalankan dari folder mana saja di cmd :
+1. Perintah --> java -cp \source\Folder\ namaPackage.namaClass
+2. Atau dengan perintah --> set CLASSPATH=\source\Folder (di Windows), export CLASSPATH=\source\Folder namaPackage.namaClass (di Linux)
