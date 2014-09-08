@@ -1,4 +1,4 @@
 Test Konflik
 Baris 1
-Baris 2
+Baris tiga
 Di bawah baris 2
