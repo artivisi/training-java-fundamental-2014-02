@@ -75,5 +75,9 @@ Daftar Fitur
 * Beberapa status perubahan :
 
     - merah : untracked, belum terdaftar untuk disimpan
-    - hijau : sudah didaftarkan, tapi belum disimpan
-    
+    - hijau : sudah didaftarkan (changes to be committed), tapi belum disimpan
+
+* Melihat isi perubahan
+
+        git diff
+        git diff --staged
