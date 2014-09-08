@@ -1,0 +1,70 @@
+version control
+
+- aplikasi utnuk mengelola file dan folder
+- bisa menyimpan history perubahan
+- bisa mengambil file version sebelumnya
+- bisa melihat perbedaan antar versi
+- bisa mengedit suatu file secara bersama sama
+- bisa menggabungkan perubahan yg di buat oleh beberapa orang secara bersamaan
+- bisa melakukan tagging(penanda) tanda/nama di versi tertentu
+- penyimpanan dilakukan secara terpusat
+
+
+application
+1. terpusat
+penyimpana secara terpusat,
+DB terpusat,\
+ exmp : CVS,Subversion
+
+2. dan terdistribusi
+DB terdistribusi atau bisa terpusat terletak pada 1 server,
+empl : Git
+Mercurial, Bazaar,
+
+Deployment :
+
+- bisa hosting sendiri
+  u/ penggunaan internal
+  exmpl: Gitblit, Gitolite,Gitorious
+
+-Cloud Services :
+
+exmpl : Github,BitBucket, GoogleCode, Sourcerforge
+
+-Instalasi :
+1. Donlot d web
+2. Install
+3. Set User dan Email
+
+- Perintah GIT
+
+a.  Donlot repository yang sudah ada (existing)
+
+mendaftarkan perubahan yang disimpan : 
+git add <namafile>
+git add .
+
+menyimpan perubahan :
+git commit -m "keterangan perubahan"
+
+yg disimpan :
+-nama dan email yang melakukan perubahan
+-waktu dan tanggal terjadinya oerubahan
+- keterangan 
+- isi perubahan
+
+melihat status perubahan :
+- merah : untracked, belum terdaftar untuk di simpan 
+- hijau : sudah didaftarkan(changes to be commited), tapi belum disimpan
+
+melihat perubahan isi detail :
+git diff
+git diff --staged 
+
+uplot perubahan ke server
+git push ->> minta username + passwd (untuk masuk penyimpanan ke server)
+
+konfigurasi username dan email
+git config --global user.name "dhelmida"
+git config --global user.name dhelmida@gmail.com
+
