@@ -20,24 +20,24 @@ Daftar Fitur
 
 * Terdistribusi
 
-    - Git
-    - Mercurial
-    - Bazaar
+    - [Git](http://git-scm.com/)
+    - [Mercurial](http://mercurial.selenic.com)
+    - [Bazaar](bazaar.canonical.com)
 
 ## Deployment ##
 
 * Hosting Sendiri
 
-    - Gitblit
-    - Gitolite
-    - Gitorious
+    - [Gitblit](http://www.gitblit.com/)
+    - [Gitolite](http://gitolite.com)
+    - [Gitorious](https://gitorious.org/)
 
 * Cloud Services
 
-    - Github
-    - Bitbucket
-    - Google Code
-    - Sourceforge
+    - [Github](https://github.com)
+    - [Bitbucket](https://bitbucket.org)
+    - [Google Code](https://code.google.com/)
+    - [Sourceforge](http://sourceforge.net)
 
 ## Instalasi ##
 
