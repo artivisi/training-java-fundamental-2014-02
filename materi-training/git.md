@@ -81,3 +81,12 @@ Daftar Fitur
 
         git diff
         git diff --staged
+
+* Upload perubahan ke server
+
+        git push
+
+* Download perubahan dari server
+
+        git pull
+
