@@ -95,4 +95,6 @@ Daftar Fitur
         git config --global user.name "Endy Muhardin"
         git config --global user.email endy.muhardin@gmail.com
 
+## Beberapa Konsep Penting ##
 
+* Merge : menggabungkan dua atau lebih perubahan terhadap satu file
