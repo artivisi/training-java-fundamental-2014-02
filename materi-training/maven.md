@@ -35,3 +35,9 @@ Build tools yang paling mainstream di Java untuk saat ini (2014).
 * Dependency Management : cari dan donlod dependensi, mudah naik versi, transitive dependency.
 * Trend jaman sekarang : store untuk semua apps.
 
+### Perintah Maven ###
+
+* Compile : mvn package
+* Clean : mvn clean
+* Clean + Compile : mvn clean package
+

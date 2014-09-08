@@ -98,3 +98,4 @@ Daftar Fitur
 ## Beberapa Konsep Penting ##
 
 * Merge : menggabungkan dua atau lebih perubahan terhadap satu file
+* Conflict : bila terjadi perubahan di lokasi yang sama dalam file yang sama
