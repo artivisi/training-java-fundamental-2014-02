@@ -89,4 +89,10 @@ Daftar Fitur
 * Download perubahan dari server
 
         git pull
+        
+* Konfigurasi user name dan email
+
+        git config --global user.name "Endy Muhardin"
+        git config --global user.email endy.muhardin@gmail.com
+
 
