@@ -50,5 +50,4 @@ public class Kehadiran {
     public void setTgl(Date tgl) {
         this.tgl = tgl;
     }
-    
 }
