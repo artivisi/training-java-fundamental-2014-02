@@ -53,16 +53,6 @@ create table materi (
 )
 
 -- skema tabel opsi
-create sequence opsi_id_seq start with 1 increment by 1;
-create table opsi(
-    id INT PRIMARY KEY,
-    id_pertanyaan INT,
-    nomer_urut INT,
-    isi VARCHAR2(255),
-    benar_salah Boolean,
-    FOREIGN KEY (id_pertanyaan) REFERENCES pertanyaan(id),
-);
--- skema tabel opsi
 
 -- skema tabel pertanyaan
 
@@ -77,5 +67,20 @@ create table peserta_batch(
 );
 
 -- skema tabel peserta_ujian
+create sequence peserta_ujian_id_seq start with 1 increment by 1;
+create table peserta_ujian(
+    id INT PRIMARY KEY,
+    id_peserta INT,
+    id_ujian INT,
+    FOREIGN KEY (id_peserta) REFERENCES peserta(id),
+    FOREIGN KEY (id_ujian) REFERENCES ujian(id)
+);
 
 -- skema tabel ujian
+create sequence ujian_id_seq start with 1 increment by 1;
+create table ujian(
+    id INT PRIMARY KEY,
+    id_materi INT,
+    tanggal_diselenggarakan DATE,
+    FOREIGN KEY (id_materi) REFERENCES materi(id)
+);

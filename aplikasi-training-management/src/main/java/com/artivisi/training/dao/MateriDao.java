@@ -28,7 +28,7 @@ public class MateriDao {
     }
     
     public List<Materi> cariSemua() {
-        List<Materi> hasil = new ArrayList<>();
+        List<Materi> hasil = new ArrayList<Materi>();
         
         return hasil;
     }
