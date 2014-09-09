@@ -48,8 +48,8 @@ create table kehadiran(
 create sequence materi_id_seq start with increment by 1;
 create table materi (
     id INT PRIMARY KEY,
-    kode VARHCAR2 (30),
-    nama VARCHAR (255)
+    kode VARCHAR2 (30),
+    nama VARCHAR2 (255)
 )
 
 -- skema tabel opsi
