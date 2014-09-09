@@ -36,7 +36,7 @@ create table kehadiran(
 );
 
 -- skema tabel materi
-create sequence materi_id_seq start with increment by 1;
+create sequence materi_id_seq start with 1 increment by 1;
 create table materi (
     id INT PRIMARY KEY,
     kode VARCHAR2 (30),
