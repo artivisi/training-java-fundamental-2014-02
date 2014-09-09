@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class Batch {
     private Integer id;
-//    private Integer id_materi;
+//    private Integer idMateri;
     private Date tanggalMulai;
     private Date tanggalSelesai;
     private String status;
