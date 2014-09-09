@@ -14,8 +14,8 @@ import java.util.Date;
  */
 public class Catatan {
     private Integer id;
-//    private Integer idPeserta;
-//    private Integer idBatch;
+    private Peserta peserta;
+    private Batch batch;
     private String isiCatatan;
     private String judulCatatan;
     private Integer noUrut;
