@@ -13,7 +13,36 @@ import java.util.Date;
  * @author CEISA-DJBC
  */
 public class Ujian {
+
      private Integer id;
      private Materi materi;
      private Date tanggalDiselenggarakan;
+     
+     
+     public Ujian(){
+         
+     }
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Materi getMateri() {
+        return materi;
+    }
+
+    public void setMateri(Materi materi) {
+        this.materi = materi;
+    }
+
+    public Date getTanggalDiselenggarakan() {
+        return tanggalDiselenggarakan;
+    }
+
+    public void setTanggalDiselenggarakan(Date tanggalDiselenggarakan) {
+        this.tanggalDiselenggarakan = tanggalDiselenggarakan;
+    }
 }

@@ -16,4 +16,46 @@ public class Opsi {
     private Integer noUrut;
     private String isi;
     private Boolean benarSalah;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Pertanyaan getIdPertanyaan() {
+        return idPertanyaan;
+    }
+
+    public void setIdPertanyaan(Pertanyaan idPertanyaan) {
+        this.idPertanyaan = idPertanyaan;
+    }
+
+    public Integer getNoUrut() {
+        return noUrut;
+    }
+
+    public void setNoUrut(Integer noUrut) {
+        this.noUrut = noUrut;
+    }
+
+    public String getIsi() {
+        return isi;
+    }
+
+    public void setIsi(String isi) {
+        this.isi = isi;
+    }
+
+    public Boolean isBenarSalah() {
+        return benarSalah;
+    }
+
+    public void setBenarSalah(Boolean benarSalah) {
+        this.benarSalah = benarSalah;
+    }
+    
+    
 }

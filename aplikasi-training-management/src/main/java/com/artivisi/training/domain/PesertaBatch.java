@@ -12,7 +12,33 @@ package com.artivisi.training.domain;
  */
 public class PesertaBatch {
     private Integer id;
- //   private Integer idBatch;
- //   private Integer idPeserta;
+    private Batch batch;
+    private Peserta peserta;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Batch getBatch() {
+        return batch;
+    }
+
+    public void setBatch(Batch batch) {
+        this.batch = batch;
+    }
+
+    public Peserta getPeserta() {
+        return peserta;
+    }
+
+    public void setPeserta(Peserta peserta) {
+        this.peserta = peserta;
+    }
+    
+    
     
 }
