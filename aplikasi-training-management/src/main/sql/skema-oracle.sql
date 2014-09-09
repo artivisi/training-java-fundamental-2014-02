@@ -19,7 +19,16 @@ create table batch (
     FOREIGN KEY (id_materi) REFERENCES materi(id)
 );
 -- skema tabel catatan
-
+create sequence catatan_id_seq start with 1 increment by 1;
+create table catatan (
+    id INT PRIMARY KEY,
+    isi VARCHAR2(255),
+    judul VARCHAR2(255),
+    no_urut INT,
+    terakhir_update DATE
+    FOREIGN KEY (id_peserta) REFERENCES peserta(id),
+    FOREIGN KEY (id_batch) REFERENCES batch(id)
+);
 -- skema tabel institusi
 
 -- skema tabel jawaban
