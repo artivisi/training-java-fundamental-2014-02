@@ -57,4 +57,6 @@ public class Peserta {
     public void setTanggalBergabung(Date tanggalBergabung) {
         this.tanggalBergabung = tanggalBergabung;
     }
+    
+    
 }
