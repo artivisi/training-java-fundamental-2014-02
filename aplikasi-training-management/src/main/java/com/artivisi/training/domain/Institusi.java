@@ -7,10 +7,6 @@
 
 package com.artivisi.training.domain;
 
-/**
- *
- * @author ceisa-djbc
- */
 public class Institusi {
     private Integer id;
     private String kode;
