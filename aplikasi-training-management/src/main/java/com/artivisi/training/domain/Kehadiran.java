@@ -7,8 +7,9 @@ package com.artivisi.training.domain;
 import java.util.Date;
 
 public class Kehadiran {
+
     private Integer id;
-private Date tanggal;
-private Integer idPeserta;
-private Integer idBatch;
+    private Date tanggal;
+    private Integer idPeserta;
+    private Integer idBatch;
 }
