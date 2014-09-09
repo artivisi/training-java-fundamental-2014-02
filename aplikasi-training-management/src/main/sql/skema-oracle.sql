@@ -10,7 +10,14 @@ create table peserta (
 );
 
 -- skema tabel batch
-
+create sequence batch_id_seq start with 1 increment by 1;
+create table batch (
+    id INT PRIMARY KEY,
+    tanggalMulai DATE,
+    tanggalSelesai DATE,
+    status VARCHAR2(32) ,
+    FOREIGN KEY (id_materi) REFERENCES materi(id)
+);
 -- skema tabel catatan
 
 -- skema tabel institusi
