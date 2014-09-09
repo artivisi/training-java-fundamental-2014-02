@@ -14,6 +14,6 @@ import java.util.Date;
  */
 public class Ujian {
      private Integer id;
-//     private Integer idMateri;
+     private Materi materi;
      private Date tanggalDiselenggarakan;
 }
