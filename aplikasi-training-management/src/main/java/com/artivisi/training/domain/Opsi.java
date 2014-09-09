@@ -12,7 +12,7 @@ package com.artivisi.training.domain;
  */
 public class Opsi {
     private Integer id;
-    private Pertanyaan idPertanyaan;
+    private Pertanyaan pertanyaan;
     private Integer noUrut;
     private String isi;
     private Boolean benarSalah;
@@ -26,11 +26,11 @@ public class Opsi {
     }
 
     public Pertanyaan getIdPertanyaan() {
-        return idPertanyaan;
+        return pertanyaan;
     }
 
     public void setIdPertanyaan(Pertanyaan idPertanyaan) {
-        this.idPertanyaan = idPertanyaan;
+        this.pertanyaan = idPertanyaan;
     }
 
     public Integer getNoUrut() {
