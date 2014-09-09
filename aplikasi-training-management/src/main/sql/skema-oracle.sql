@@ -11,9 +11,13 @@ create table peserta (
 
 -- skema tabel batch
 
+-- skema tabel catatan
+
 -- skema tabel institusi
 
--- skema tabel catatan
+-- skema tabel jawaban
+
+-- skema tabel kehadiran
 
 -- skema tabel materi
 
@@ -22,5 +26,7 @@ create table peserta (
 -- skema tabel pertanyaan
 
 -- skema tabel peserta_batch
+
+-- skema tabel peserta_ujian
 
 -- skema tabel ujian

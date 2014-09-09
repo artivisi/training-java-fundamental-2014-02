@@ -2,18 +2,21 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain.com.id.djbc;
+package com.artivisi.training.domain;
+
+import java.util.Date;
 
 /**
  *
- * @author CEISA-DJBC
+ * @author Andi Zulkifli
  */
-public class PesertaBatch {
+public class Kehadiran {
     private int id;
-    private Batch batch;
+    private Date tgl;
     private Peserta peserta;
+    private Batch batch;
 
-    public PesertaBatch() {
+    public Kehadiran() {
     }
 
     public Batch getBatch() {
@@ -39,6 +42,13 @@ public class PesertaBatch {
     public void setPeserta(Peserta peserta) {
         this.peserta = peserta;
     }
-    
+
+    public Date getTgl() {
+        return tgl;
+    }
+
+    public void setTgl(Date tgl) {
+        this.tgl = tgl;
+    }
     
 }

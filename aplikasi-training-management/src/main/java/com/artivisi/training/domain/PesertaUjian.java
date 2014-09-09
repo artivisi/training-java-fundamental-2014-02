@@ -2,19 +2,18 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain.com.id.djbc;
+package com.artivisi.training.domain;
 
 /**
  *
  * @author Andi Zulkifli
  */
-public class Pertanyaan {
+public class PesertaUjian {
     private int id;
-    private String isi;
     private Materi materi;
-    private String tingkatKesulitan;
+    private Peserta peserta;
 
-    public Pertanyaan() {
+    public PesertaUjian() {
     }
 
     public int getId() {
@@ -25,14 +24,6 @@ public class Pertanyaan {
         this.id = id;
     }
 
-    public String getIsi() {
-        return isi;
-    }
-
-    public void setIsi(String isi) {
-        this.isi = isi;
-    }
-
     public Materi getMateri() {
         return materi;
     }
@@ -41,12 +32,12 @@ public class Pertanyaan {
         this.materi = materi;
     }
 
-    public String getTingkatKesulitan() {
-        return tingkatKesulitan;
+    public Peserta getPeserta() {
+        return peserta;
     }
 
-    public void setTingkatKesulitan(String tingkatKesulitan) {
-        this.tingkatKesulitan = tingkatKesulitan;
+    public void setPeserta(Peserta peserta) {
+        this.peserta = peserta;
     }
     
     
