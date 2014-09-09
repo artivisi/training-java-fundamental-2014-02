@@ -12,7 +12,7 @@ package com.artivisi.training.domain;
  */
 public class Opsi {
     private Integer id;
-    private String pertanyaan;
+//    private Integer idPertanyaan;
     private Integer noUrut;
     private String isi;
     private Boolean benarSalah;
