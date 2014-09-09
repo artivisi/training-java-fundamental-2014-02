@@ -59,7 +59,7 @@ create table opsi(
     id_pertanyaan INT,
     nomer_urut INT,
     isi VARCHAR2(255),
-    benar_salah Boolean,
+    benar_salah number(1) check(benar_salah in (0, 1)) 
     FOREIGN KEY (id_pertanyaan) REFERENCES pertanyaan(id),
 );
 -- skema tabel opsi
