@@ -26,6 +26,9 @@ public class OpsiDao {
     public Opsi cariById(Integer id) {
         return null;
     }
+    public Opsi cariByNoUrut(Integer noUrut) {
+        return null;
+    }
     
     public List<Opsi> cariSemua() {
         List<Opsi> hasil = new ArrayList<>();
