@@ -26,7 +26,7 @@ create table kehadiran(
     id_batch INT,
     FOREIGN KEY (id_peserta) REFERENCES peserta(id),
     FOREIGN KEY (id_batch) REFERENCES batch(id)
-)
+);
 
 -- skema tabel materi
 
