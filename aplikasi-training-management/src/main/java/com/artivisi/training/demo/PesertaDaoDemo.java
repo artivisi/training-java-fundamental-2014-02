@@ -7,9 +7,10 @@ import java.util.Date;
 public class PesertaDaoDemo {
     public static void main(String[] args) {
         Peserta p = new Peserta();
-        p.setKode("P-001");
-        p.setNama("Peserta 001");
-        p.setEmail("p1@gmail.com");
+        p.setId(1);
+        p.setKode("P-001x");
+        p.setNama("Peserta 001x");
+        p.setEmail("p1x@gmail.com");
         p.setTanggalBergabung(new Date());
         
         PesertaDao pd = new PesertaDao();

@@ -20,16 +20,32 @@ public class PesertaDao {
             = "insert into peserta (kode, nama, email, tanggal_bergabung) "
             + "values(?,?,?,?)";
     
+    private static final String SQL_UPDATE
+            = "update peserta set kode = ?,"
+            + "nama = ?, email = ?,"
+            + "tanggal_bergabung = ? "
+            + "where id = ?";
+    
     public void simpan(Peserta p){
         try {
             Connection c = KoneksiHelper.bukaKoneksi();
             
-            PreparedStatement ps = c.prepareStatement(SQL_INSERT);
-            ps.setString(1, p.getKode());
-            ps.setString(2, p.getNama());
-            ps.setString(3, p.getEmail());
-            ps.setDate(4, new java.sql.Date(p.getTanggalBergabung().getTime()));
-            ps.executeUpdate();
+            if(p.getId() == null) {
+                PreparedStatement ps = c.prepareStatement(SQL_INSERT);
+                ps.setString(1, p.getKode());
+                ps.setString(2, p.getNama());
+                ps.setString(3, p.getEmail());
+                ps.setDate(4, new java.sql.Date(p.getTanggalBergabung().getTime()));
+                ps.executeUpdate();
+            } else {
+                PreparedStatement ps = c.prepareStatement(SQL_UPDATE);
+                ps.setString(1, p.getKode());
+                ps.setString(2, p.getNama());
+                ps.setString(3, p.getEmail());
+                ps.setDate(4, new java.sql.Date(p.getTanggalBergabung().getTime()));
+                ps.setInt(5, p.getId());
+                ps.executeUpdate();
+            }
             
             KoneksiHelper.tutupKoneksi(c);
         } catch (SQLException ex) {
