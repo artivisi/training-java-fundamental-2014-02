@@ -36,6 +36,12 @@ create table kehadiran(
 );
 
 -- skema tabel materi
+create sequence materi_id_seq start with increment by 1;
+create table materi (
+    id INT PRIMARY KEY,
+    kode VARHCAR2 (30),
+    nama VARCHAR (255)
+)
 
 -- skema tabel opsi
 create sequence opsi_id_seq start with 1 increment by 1;
