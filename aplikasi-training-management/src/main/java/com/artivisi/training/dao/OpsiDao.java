@@ -31,7 +31,7 @@ public class OpsiDao {
     }
     
     public List<Opsi> cariSemua() {
-        List<Opsi> hasil = new ArrayList<>();
+        List<Opsi> hasil = new ArrayList<Opsi>();
         
         return hasil;
     }
