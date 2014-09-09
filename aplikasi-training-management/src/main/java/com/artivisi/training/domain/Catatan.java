@@ -12,8 +12,12 @@ import java.util.Date;
  *
  * @author CEISA-DJBC
  */
-public class Ujian {
-     private Integer id;
-//     private Integer idMateri;
-     private Date tanggalDiselenggarakan;
+public class Catatan {
+    private Integer id;
+//    private Integer idPeserta;
+//    private Integer idBatch;
+    private String isiCatatan;
+    private String judulCatatan;
+    private Integer noUrut;
+    private Date terakhirUpdate;
 }
