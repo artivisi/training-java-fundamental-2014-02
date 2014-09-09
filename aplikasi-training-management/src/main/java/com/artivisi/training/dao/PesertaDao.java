@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,6 +26,9 @@ public class PesertaDao {
             + "nama = ?, email = ?,"
             + "tanggal_bergabung = ? "
             + "where id = ?";
+    
+    private static final String SQL_SELECT_BY_ID
+            = "select * from peserta where id = ?";
     
     public void simpan(Peserta p){
         try {
@@ -58,7 +62,27 @@ public class PesertaDao {
     }
     
     public Peserta cariById(Integer id){
-        return null;
+        Peserta p = null;
+        try {
+            Connection c = KoneksiHelper.bukaKoneksi();
+            
+            PreparedStatement ps = c.prepareStatement(SQL_SELECT_BY_ID);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                p = new Peserta();
+                p.setId(rs.getInt("id"));
+                p.setKode(rs.getString("kode"));
+                p.setNama(rs.getString("nama"));
+                p.setEmail(rs.getString("email"));
+                p.setTanggalBergabung(rs.getDate("tanggal_bergabung"));
+            }
+            
+            KoneksiHelper.tutupKoneksi(c);
+        } catch (SQLException ex) {
+            Logger.getLogger(PesertaDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return p;
     }
     
     public List<Peserta> cariSemua(){
