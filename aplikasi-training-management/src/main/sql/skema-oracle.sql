@@ -25,6 +25,15 @@ create table batch (
 -- skema tabel jawaban
 
 -- skema tabel kehadiran
+create sequence kehadiran_id_seq start with 1 increment by 1;
+create table kehadiran(
+    id INT PRIMARY KEY,
+    tanggal DATE,
+    id_peserta INT,
+    id_batch INT,
+    FOREIGN KEY (id_peserta) REFERENCES peserta(id),
+    FOREIGN KEY (id_batch) REFERENCES batch(id)
+);
 
 -- skema tabel materi
 
