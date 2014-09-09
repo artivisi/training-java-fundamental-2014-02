@@ -18,7 +18,7 @@ create table peserta (
 -- skema tabel jawaban
 
 -- skema tabel kehadiran
-create sequence kehadiran_id_seq start with increment by 1;
+create sequence kehadiran_id_seq start with 1 increment by 1;
 create table kehadiran(
     id INT PRIMARY KEY,
     tanggal DATE,
