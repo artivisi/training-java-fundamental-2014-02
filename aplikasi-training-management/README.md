@@ -101,6 +101,6 @@ Aplikasi untuk mengelola kegiatan training
 * Jawaban
 
     - id
-    - id\_peserta_ujian
+    - id_peserta_ujian
     - id_pertanyaan
     - id_opsi
