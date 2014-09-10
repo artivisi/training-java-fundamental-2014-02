@@ -1,6 +1,7 @@
 package com.artivisi.training.demo;
 
 import com.artivisi.training.dao.PesertaDao;
+import com.artivisi.training.domain.Institusi;
 import com.artivisi.training.domain.Peserta;
 import java.util.Date;
 import java.util.List;
@@ -14,10 +15,14 @@ public class PesertaDaoDemo {
         p.setEmail("p1x@gmail.com");
         p.setTanggalBergabung(new Date());
         
-        PesertaDao pd = new PesertaDao();
-        pd.simpan(p);
+        Institusi i = new Institusi();
+        i.setId(1);
+        p.setInstitusi(i);
         
-        Peserta px = pd.cariById(1);
+        PesertaDao pd = new PesertaDao();
+        //pd.simpan(p);
+        
+        Peserta px = pd.cariById(2);
         tampilkanPeserta(px);
         
         List<Peserta> semuaPeserta = pd.cariSemua();
@@ -25,7 +30,7 @@ public class PesertaDaoDemo {
             tampilkanPeserta(pz);
         }
         
-        pd.hapus(px);
+        //pd.hapus(px);
     }
 
     private static void tampilkanPeserta(Peserta px) {
@@ -34,5 +39,6 @@ public class PesertaDaoDemo {
         System.out.println("Nama : "+px.getNama());
         System.out.println("Email : "+px.getEmail());
         System.out.println("Tanggal Bergabung : "+px.getTanggalBergabung());
+        System.out.println("Institusi : "+px.getInstitusi().getNama());
     }
 }

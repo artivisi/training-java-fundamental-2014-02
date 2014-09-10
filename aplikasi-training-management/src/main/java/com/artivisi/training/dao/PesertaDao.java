@@ -1,5 +1,6 @@
 package com.artivisi.training.dao;
 
+import com.artivisi.training.domain.Institusi;
 import com.artivisi.training.domain.Peserta;
 import com.artivisi.training.exception.DataTidakAdaException;
 import java.util.List;
@@ -19,23 +20,37 @@ public class PesertaDao {
 
     // MySQL tidak pakai sequence
     private static final String SQL_INSERT
-            = "insert into peserta (kode, nama, email, tanggal_bergabung) "
-            + "values(?,?,?,?)";
+            = "insert into peserta (kode, nama, email, tanggal_bergabung, id_institusi) "
+            + "values(?,?,?,?,?)";
 
     private static final String SQL_UPDATE
             = "update peserta set kode = ?,"
             + "nama = ?, email = ?,"
             + "tanggal_bergabung = ? "
+            + "id_institusi = ? "
             + "where id = ?";
 
     private static final String SQL_SELECT_BY_ID
-            = "select * from peserta where id = ?";
+            = "select " +
+            "p.*, " +
+            "i.kode as institusi_kode, i.nama as institusi_nama, " +
+            "i.alamat, i.telepon, i.website " +
+            "from peserta p " +
+            "inner join institusi i " +
+            "on p.id_institusi = i.id " +
+            "where p.id = ?";
     
     private static final String SQL_DELETE_BY_ID
             = "delete from peserta where id = ?";
 
     private static final String SQL_SELECT_ALL
-            = "select * from peserta";
+            = "select " +
+            "p.id, p.kode, p.nama, p.email, p.tanggal_bergabung, p.id_institusi, " +
+            "i.id as institusi_id, i.kode as institusi_kode, i.nama as institusi_nama, " +
+            "i.alamat, i.telepon, i.website " +
+            "from peserta p " +
+            "inner join institusi i " +
+            "on p.id_institusi = i.id ";
 
     public void simpan(Peserta p) {
         try {
@@ -47,6 +62,7 @@ public class PesertaDao {
                 ps.setString(2, p.getNama());
                 ps.setString(3, p.getEmail());
                 ps.setDate(4, new java.sql.Date(p.getTanggalBergabung().getTime()));
+                ps.setInt(5, p.getInstitusi().getId());
                 ps.executeUpdate();
             } else {
                 PreparedStatement ps = c.prepareStatement(SQL_UPDATE);
@@ -54,7 +70,8 @@ public class PesertaDao {
                 ps.setString(2, p.getNama());
                 ps.setString(3, p.getEmail());
                 ps.setDate(4, new java.sql.Date(p.getTanggalBergabung().getTime()));
-                ps.setInt(5, p.getId());
+                ps.setInt(5, p.getInstitusi().getId());
+                ps.setInt(6, p.getId());
                 ps.executeUpdate();
             }
 
@@ -83,6 +100,7 @@ public class PesertaDao {
             Connection c = KoneksiHelper.bukaKoneksi();
 
             PreparedStatement ps = c.prepareStatement(SQL_SELECT_BY_ID);
+            System.out.println(SQL_SELECT_BY_ID);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -127,6 +145,16 @@ public class PesertaDao {
         p.setNama(rs.getString("nama"));
         p.setEmail(rs.getString("email"));
         p.setTanggalBergabung(rs.getDate("tanggal_bergabung"));
+        
+        Institusi i = new Institusi();
+        i.setId(rs.getInt("id_institusi"));
+        i.setKode(rs.getString("institusi_kode"));
+        i.setNama(rs.getString("institusi_nama"));
+        i.setAlamat(rs.getString("alamat"));
+        i.setTelepon(rs.getString("telepon"));
+        i.setWebsite(rs.getString("website"));
+        
+        p.setInstitusi(i);
         return p;
     }
 }
