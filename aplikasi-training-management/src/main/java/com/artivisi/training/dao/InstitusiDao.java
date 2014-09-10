@@ -74,7 +74,7 @@ public class InstitusiDao {
             
             KoneksiHelper.tutupKoneksi(c);
         } catch (SQLException ex) {
-            Logger.getLogger(PesertaDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InstitusiDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
