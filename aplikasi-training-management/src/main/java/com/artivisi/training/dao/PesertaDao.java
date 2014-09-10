@@ -1,6 +1,7 @@
 package com.artivisi.training.dao;
 
 import com.artivisi.training.domain.Peserta;
+import com.artivisi.training.exception.DataTidakAdaException;
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.Connection;
@@ -86,6 +87,8 @@ public class PesertaDao {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 p = konversiResultSetKePeserta(rs);
+            } else {
+                throw new DataTidakAdaException("Peserta dengan id "+id+" tidak ada dalam database");
             }
 
             KoneksiHelper.tutupKoneksi(c);
