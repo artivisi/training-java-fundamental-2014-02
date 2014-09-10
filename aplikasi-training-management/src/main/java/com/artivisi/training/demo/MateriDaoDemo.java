@@ -7,7 +7,7 @@ import java.util.List;
 public class MateriDaoDemo {
     public static void main(String[] args) {
         Materi m = new Materi();
-        //p.setId(1);
+        //m.setId(1);
         m.setKode("M-001");
         m.setNama("Java Fundamental");
         

@@ -30,6 +30,15 @@ create table catatan (
     FOREIGN KEY (id_batch) REFERENCES batch(id)
 );
 -- skema tabel institusi
+create sequence institusi_id_seq start with 1 increment by 1;
+create table institusi(
+    id INT PRIMARY KEY,
+    kode VARCHAR2(30),
+    nama VARCHAR2(100),
+    alamat VARCHAR2(255),
+    telepon VARCHAR2(50),
+    website VARCHAR2(100)
+);
 
 -- skema tabel jawaban
 
