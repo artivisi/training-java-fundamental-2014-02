@@ -1,6 +1,6 @@
 package com.artivisi.training.exception;
 
-public class DataTidakAdaException extends RuntimeException {
+public class DataTidakAdaException extends Exception {
 
     public DataTidakAdaException() {
     }

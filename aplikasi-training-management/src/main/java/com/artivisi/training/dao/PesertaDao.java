@@ -94,7 +94,7 @@ public class PesertaDao {
         }
     }
 
-    public Peserta cariById(Integer id) {
+    public Peserta cariById(Integer id) throws DataTidakAdaException {
         Peserta p = null;
         try {
             Connection c = KoneksiHelper.bukaKoneksi();

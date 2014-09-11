@@ -3,11 +3,12 @@ package com.artivisi.training.demo;
 import com.artivisi.training.dao.PesertaDao;
 import com.artivisi.training.domain.Institusi;
 import com.artivisi.training.domain.Peserta;
+import com.artivisi.training.exception.DataTidakAdaException;
 import java.util.Date;
 import java.util.List;
 
 public class PesertaDaoDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DataTidakAdaException {
         Peserta p = new Peserta();
         //p.setId(1);
         p.setKode("P-001x");
