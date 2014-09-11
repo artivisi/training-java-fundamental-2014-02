@@ -22,6 +22,8 @@ public class Pertanyaan {
     }
     
     public Integer getId() {
+        Peserta p = new Peserta();
+        p.setNama("Endy");
         return id;
     }
 

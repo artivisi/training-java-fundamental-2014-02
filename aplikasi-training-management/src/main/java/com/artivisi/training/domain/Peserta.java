@@ -3,12 +3,23 @@ package com.artivisi.training.domain;
 import java.util.Date;
 
 public class Peserta {
+    private static Integer jumlah;
+    
     private Integer id;
     private String kode;
     private String nama;
     private String email;
     private Institusi institusi;
     private Date tanggalBergabung;
+
+    public static Integer getJumlah() {
+        // System.out.println("Nama : "+nama);
+        return jumlah;
+    }
+
+    public static void setJumlah(Integer jumlah) {
+        Peserta.jumlah = jumlah;
+    }
 
     public Integer getId() {
         return id;
@@ -27,11 +38,12 @@ public class Peserta {
     }
 
     public String getNama() {
+        System.out.println("Jumlah : "+jumlah);
         return nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNama(String x) {
+        nama = x;
     }
 
     public String getEmail() {
