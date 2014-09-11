@@ -8,11 +8,11 @@ import java.util.logging.Logger;
 
 public class KoneksiHelper {
     private static final String DATABASE_DRIVER 
-    //        = "oracle.jdbc.OracleDriver";
-              = "com.mysql.jdbc.Driver";
+            = "oracle.jdbc.OracleDriver";
+//              = "com.mysql.jdbc.Driver";
     private static final String DATABASE_URL
-    //        = "jdbc:oracle:thin:@localhost:1521:xe";
-              = "jdbc:mysql://localhost/pelatihan";
+            = "jdbc:oracle:thin:@localhost:1521:xe";
+//              = "jdbc:mysql://localhost/pelatihan";
     private static final String DATABASE_USERNAME
             = "pelatihan";
     private static final String DATABASE_PASSWORD
