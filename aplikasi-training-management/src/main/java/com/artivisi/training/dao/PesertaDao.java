@@ -14,14 +14,14 @@ import java.util.logging.Logger;
 
 public class PesertaDao {
     // Oracle pakai sequence
-    // private static final String SQL_INSERT
-    //        = "insert into peserta (id,kode, nama, email, tanggal_bergabung) "
-    //        + "values(peserta_id_seq.nextval,?,?,?,?)";
+     private static final String SQL_INSERT
+            = "insert into peserta (id,kode, nama, email, tanggal_bergabung) "
+            + "values(peserta_id_seq.nextval,?,?,?,?)";
 
     // MySQL tidak pakai sequence
-    private static final String SQL_INSERT
-            = "insert into peserta (kode, nama, email, tanggal_bergabung, id_institusi) "
-            + "values(?,?,?,?,?)";
+//    private static final String SQL_INSERT
+//            = "insert into peserta (kode, nama, email, tanggal_bergabung, id_institusi) "
+//            + "values(?,?,?,?,?)";
 
     private static final String SQL_UPDATE
             = "update peserta set kode = ?,"
