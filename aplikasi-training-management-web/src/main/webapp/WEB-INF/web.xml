@@ -12,6 +12,14 @@
         <servlet-name>PesertaFormServlet</servlet-name>
         <servlet-class>com.artivisi.training.web.PesertaFormServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PesertaUploadServlet</servlet-name>
+        <servlet-class>com.artivisi.training.web.PesertaUploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PesertaHasilUploadServlet</servlet-name>
+        <servlet-class>com.artivisi.training.web.PesertaHasilUploadServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HaloServlet</servlet-name>
         <url-pattern>/halo</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>PesertaFormServlet</servlet-name>
         <url-pattern>/peserta/form</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PesertaUploadServlet</servlet-name>
+        <url-pattern>/peserta/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PesertaHasilUploadServlet</servlet-name>
+        <url-pattern>/peserta/import</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
