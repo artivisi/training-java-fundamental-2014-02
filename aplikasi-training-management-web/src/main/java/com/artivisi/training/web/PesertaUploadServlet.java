@@ -46,7 +46,10 @@ public class PesertaUploadServlet extends HttpServlet {
                 System.out.println("Ukuran : "+fileItem.getSize());
                 System.out.println("Tipe File : "+fileItem.getContentType());
                 
-                File sementara = File.createTempFile("peserta", "csv");
+                //File sementara = File.createTempFile("peserta", "csv");
+                String lokasi = servletContext.getRealPath("/upload");
+                System.out.println("Lokasi penyimpanan : "+lokasi);
+                File sementara = new File(lokasi + File.separator + fileItem.getName());
                 fileItem.write(sementara);
                 HasilImportPeserta hasil = PesertaImporter.proses(sementara);
                 System.out.println("Sukses Upload : "+hasil.getSukses().size());
