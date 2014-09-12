@@ -9,6 +9,10 @@
     <body>
         <h1>Daftar Peserta</h1>
         
+        <a href="upload">Import Data Peserta</a> | 
+        <a href="download">Download Data Peserta</a> |
+        <a href="form">Tambah Data Peserta</a> |
+        
         <table border="1">
             <thead>
                 <tr>

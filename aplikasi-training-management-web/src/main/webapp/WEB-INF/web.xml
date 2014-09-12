@@ -20,6 +20,10 @@
         <servlet-name>PesertaHasilUploadServlet</servlet-name>
         <servlet-class>com.artivisi.training.web.PesertaHasilUploadServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PesertaDownloadServlet</servlet-name>
+        <servlet-class>com.artivisi.training.web.PesertaDownloadServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HaloServlet</servlet-name>
         <url-pattern>/halo</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>PesertaHasilUploadServlet</servlet-name>
         <url-pattern>/peserta/import</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PesertaDownloadServlet</servlet-name>
+        <url-pattern>/peserta/download</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
