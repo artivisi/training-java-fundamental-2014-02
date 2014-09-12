@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,16 @@
     <body>
         <h1>Entri Data Peserta</h1>
 
+        <c:if test="${errors != null}">
+            Ada error : 
+            <ul>
+            <c:forEach var="err" items="${errors}">
+                <li>Field ${err.key} : ${err.value}</li>
+            </c:forEach>
+            </ul>
+        </c:if>
+        
+        
         <form class="form-horizontal" role="form" method="post">
             <div class="form-group">
                 <label for="kode" class="col-sm-2 control-label">Kode</label>

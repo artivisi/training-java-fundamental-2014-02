@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -20,8 +22,18 @@ public class PesertaFormServlet extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Map<String, String> errors = new HashMap<String, String>();
+        
         String kode = req.getParameter("kode");
+        if(kode == null || kode.trim().length() < 1){
+            errors.put("kode", "Kode tidak boleh kosong");
+        }
+        
         String name = req.getParameter("nama");
+        if(name == null || name.trim().length() < 1){
+            errors.put("nama", "Nama tidak boleh kosong");
+        }
+        
         String email = req.getParameter("email");
         String strTanggalBergabung = req.getParameter("tanggalBergabung");
         
@@ -42,6 +54,13 @@ public class PesertaFormServlet extends HttpServlet {
         Institusi i = new Institusi();
         i.setId(1);
         p.setInstitusi(i);
+        
+        if(!errors.isEmpty()){
+            req.setAttribute("errors", errors);
+            req.getRequestDispatcher("/WEB-INF/templates/jsp/peserta/form.jsp")
+                    .forward(req, resp);
+            return;
+        }
         
         dao.simpan(p);
         
