@@ -7,46 +7,38 @@
     </head>
     <body>
         <h1>Entri Data Peserta</h1>
-        
-        <form method="POST">
-            
-            <table border="1">
-                <tbody>
-                    <tr>
-                        <td>Kode</td>
-                        <td>
-                            <input type="text" name="kode">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nama</td>
-                        <td>
-                            <input type="text" name="nama">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>
-                            <input type="text" name="email">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tanggal Bergabung</td>
-                        <td>
-                            <input type="text" name="tanggalBergabung">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>
-                            <input type="submit" value="Simpan">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
 
-            
+        <form class="form-horizontal" role="form" method="post">
+            <div class="form-group">
+                <label for="kode" class="col-sm-2 control-label">Kode</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode Peserta">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nama" class="col-sm-2 control-label">Nama</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Peserta">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Peserta">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tanggalBergabung" class="col-sm-2 control-label">Tanggal Bergabung</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="tanggalBergabung" name="tanggalBergabung" placeholder="Tanggal Bergabung">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Simpan</button>
+                </div>
+            </div>
         </form>
-        
+
     </body>
 </html>

@@ -48,6 +48,17 @@
         <servlet-name>PesertaDownloadServlet</servlet-name>
         <url-pattern>/peserta/download</url-pattern>
     </servlet-mapping>
+    
+    <filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+    </filter>
+ 
+    <filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
     <session-config>
         <session-timeout>
             30

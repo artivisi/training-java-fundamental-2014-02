@@ -9,11 +9,13 @@
     <body>
         <h1>Daftar Peserta</h1>
         
-        <a href="upload">Import Data Peserta</a> | 
-        <a href="download">Download Data Peserta</a> |
-        <a href="form">Tambah Data Peserta</a> |
+        <p>
+            <a href="upload" class="btn btn-primary">Import Data Peserta</a>
+            <a href="download" class="btn btn-success">Download Data Peserta</a>
+            <a href="form" class="btn btn-info">Tambah Data Peserta</a>
+        </p>
         
-        <table border="1">
+        <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>Kode</th>
@@ -31,8 +33,12 @@
                     <td>${p.email}</td>
                     <td>${p.tanggalBergabung}</td>
                     <td>
-                        <a href="form?id=${p.id}">edit</a> | 
-                        <a href="hapus?id=${p.id}">hapus</a> 
+                        <a href="form?id=${p.id}" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span> edit
+                        </a> 
+                        <a href="hapus?id=${p.id}" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-trash"></span> hapus
+                        </a> 
                         
                     </td>
                 </tr>
